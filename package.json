@@ -1,0 +1,26 @@
+{
+  "name": "express_handlebar_project",
+  "version": "1.0.0",
+  "description": "using handlebar in express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rubel-hossain/express_handlebar_project.git"
+  },
+  "keywords": [
+    "handlebar",
+    "expressjs"
+  ],
+  "author": "rubel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rubel-hossain/express_handlebar_project/issues"
+  },
+  "homepage": "https://github.com/Rubel-hossain/express_handlebar_project#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
