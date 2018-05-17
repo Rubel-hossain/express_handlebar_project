@@ -1,7 +1,7 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Idea = new Schema ({
+const IdeaSchema = new Schema ({
 
     title: {
         type: String,
@@ -17,4 +17,4 @@ const Idea = new Schema ({
     }
 });
 
-mongoose.model('ideas', Idea);
+mongoose.model('ideas', IdeaSchema);
