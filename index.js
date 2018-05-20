@@ -42,7 +42,7 @@ app.get('/ideas/add_new', (req,res)=>{
 });
 
 // process add_new form
-app.post('/signup_form', (req,res)=>{
+app.post('/ideas', (req,res)=>{
     
     let errors = [];
 
@@ -70,12 +70,12 @@ app.post('/signup_form', (req,res)=>{
         new Ideas(usersData)
             .save()
             .then((ideas) => {
-                res.redirect('signup_form');
+                res.redirect('ideas');
             });
     }
 });
 
-app.get('/signup_form', (req,res)=>{
+app.get('/ideas', (req,res)=>{
 
     Ideas.find({})
         .sort({date:'desc'})
@@ -110,7 +110,7 @@ app.post('/update_form/:id', (req,res)=>{
         prevValue.details = req.body.details;
         prevValue.save();
      }).then((prevValue) =>{
-         res.redirect("/signup_form");
+         res.redirect("/ideas");
      })
 });
 
@@ -119,7 +119,7 @@ app.post('/update_form/:id', (req,res)=>{
 app.delete('/ideas/delete/:id', (req,res)=>{
      Ideas.remove({_id:req.params.id})
      .then(()=>{
-        res.redirect("/signup_form");
+        res.redirect("/ideas");
      });
 });
 
