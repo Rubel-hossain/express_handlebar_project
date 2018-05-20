@@ -105,13 +105,22 @@ app.get('/ideas/edit/:id', (req,res)=>{
 app.post('/update_form/:id', (req,res)=>{
      Ideas.findOne({
          _id: req.params.id
-     }).then((prevValue)=>{
-        prevValue.title = req.body.title;
+     }).then((prevValue) =>{
+        prevValue.title   = req.body.title;
         prevValue.details = req.body.details;
         prevValue.save();
-     }).then((prevValue)=>{
+     }).then((prevValue) =>{
          res.redirect("/signup_form");
      })
+});
+
+// delete
+
+app.delete('/ideas/delete/:id', (req,res)=>{
+     Ideas.remove({_id:req.params.id})
+     .then((req,res)=>{
+        res.redirect("/signup_form");
+     });
 });
 
 app.listen(port, ()=>console.log("working"));
