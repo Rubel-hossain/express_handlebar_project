@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+          {{#each Ideas}}
+            <div class="card secondary mb-4">
+              <div class="card-body">
+                <h4 class="card-title">{{title}}</h4>
+                <p class="card-text">{{details}}</p>
+                <a href="ideas/edit/{{id}}" class="btn btn-secondary">Edit</a>
+                <form action="odeas/delete/{{id}}?_method=DELETE" class="d-inline">
+                   <input type="hidden" name="_method" value="DELETE">
+                   <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

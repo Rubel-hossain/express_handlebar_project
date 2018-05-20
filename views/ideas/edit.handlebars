@@ -8,18 +8,19 @@
                   </div>
                 {{/each}}
                 <div class="card-body">
-                    <h4 class="card-title">Add New Ideas</h4>
-                    <form action="/signup_form" method="post">
+                    <h4 class="card-title">Edit An Idea</h4>
+                    <form action="/update_form/{{Ideas.id}}?_metrhod=PUT" method="post">
+                        <input type="hidden" name="_method" value="PUT">
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="title" id="title" class="form-control" placeholder="title">
+                            <input type="text" name="title" id="title" class="form-control" value="{{Ideas.title}}">
                         </div>
                         <div class="form-group">
                         <label for="details">Details</label>
-                        <input type="text" name="details" id="details" class="form-control" placeholder="details">
+                        <input type="text" name="details" id="details" class="form-control" value="{{Ideas.details}}">
                         </div>
                         <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Post</button>
+                          <button type="submit" class="btn btn-primary">Update</button>
                         </div>
                     </form>
                 </div>
