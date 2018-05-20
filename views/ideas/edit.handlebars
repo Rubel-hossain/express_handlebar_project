@@ -9,7 +9,7 @@
                 {{/each}}
                 <div class="card-body">
                     <h4 class="card-title">Edit An Idea</h4>
-                    <form action="/update_form/{{Ideas.id}}?_metrhod=PUT" method="post">
+                    <form action="/ideas/update_form/{{Ideas.id}}?_metrhod=PUT" method="post">
                         <input type="hidden" name="_method" value="PUT">
                         <div class="form-group">
                             <label for="title">Title</label>
