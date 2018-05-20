@@ -118,7 +118,7 @@ app.post('/update_form/:id', (req,res)=>{
 
 app.delete('/ideas/delete/:id', (req,res)=>{
      Ideas.remove({_id:req.params.id})
-     .then((req,res)=>{
+     .then(()=>{
         res.redirect("/signup_form");
      });
 });
